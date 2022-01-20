@@ -2,10 +2,7 @@
   "name": "reducer-generator",
   "version": "0.0.1",
   "description": "Library generate generic state for redux",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CMDev97/reducer-generator.git"
@@ -15,6 +12,15 @@
   "bugs": {
     "url": "https://github.com/CMDev97/RequestEngine/issues"
   },
-  "homepage": "https://github.com/CMDev97/RequestEngine#readme"
+  "homepage": "https://github.com/CMDev97/RequestEngine#readme",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -f *.js *.js.map",
+    "lint": "eslint *.ts",
+    "start": "ts-node ./src/index.ts",
+    "test": "node --harmony node_modules/.bin/jest"
+  },
+  "dependencies": {
+    "ts-node": "^10.4.0"
+  }
 }
-
